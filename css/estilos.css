@@ -30,18 +30,21 @@ header {
     height: 600px;
     background: #35c9cb;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, hsla(196, 95%, 50%, 0.459), hsla(163, 98%, 50%, 0.664)), url(../IMG/portada.jpg);
+    background: linear-gradient( hsla(47, 100%, 49%, 0.459), hsla(189, 100%, 50%, 0.664) ), url(../IMG/feature-image.png);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, hsla(188, 95%, 50%, 0.459), hsla(189, 100%, 50%, 0.664)), url(../img/portada.jpg);
+    background: linear-gradient(to right, hsla(47, 100%, 49%, 0.459), hsla(189, 100%, 50%, 0.664)), url(../IMG/feature-image.png);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-size: cover;
     background-attachment: fixed;
     position: relative;
 }
 
+
+
 nav{
     text-align: right;
     padding: 30px 50px 0 0;
+    background-image: linear-gradient(to right, hsla(47, 100%, 49%, 0.459), hsla(189, 100%, 50%, 0.664))
 }
 
 nav > a{
@@ -86,17 +89,17 @@ header .textos-header{
 
 /* About us */
 
-main .sobre-nosotros{
-    padding: 30px 0 60px 0;
-}
-.contenedor-sobre-nosotros{
-    display: flex;
-    justify-content: space-evenly;
-}
 
-.imagen-about-us{
-    width: 48%;
-}
+
+    .contenedor-sobre-nosotros{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+    .imagen-about-us{
+        width: 48%;
+    }
+    
 
 .sobre-nosotros .contenido-textos{
     width: 48%;
@@ -119,32 +122,24 @@ main .sobre-nosotros{
     margin-right: 5px;
 }
 
-.contenido-textos p{
+.sobre mi{
     padding: 0px 0px 30px 15px;
     font-weight: 300;
     text-align: justify;
 }
 
 
-.CV {
-    width: 100%;
+.video {   width: 100%;
     height: auto;
     align-content: center;
-
 }
 
-.video {   width: 10%;
-    height: auto;
-    align-content: center;
-
-
-}
 
 
 /* footer */
 
 footer{
-    background: #414141;
+    background: linear-gradient( hsla(47, 100%, 49%, 0.459), hsla(189, 100%, 50%, 0.664) );
     padding: 60px 0 30px 0;
     margin: auto;
     overflow: hidden;
@@ -181,6 +176,8 @@ footer{
     color: #9e9797;
 }
 
+
+
 @media screen and (max-width:900px){
     header{
         background-position: center;
@@ -202,7 +199,12 @@ footer{
 
 
     /* Footer */
-
+.box {
+    width: 600px;
+    height: auto;
+    background: linear-gradient( hsla(0, 0%, 100%, 0.459), hsla(0, 0%, 100%, 0.664) ), url(../IMG/feature-image.png);
+    
+}
     .contenedor-footer{
         flex-direction: column;
         border: none;
@@ -217,13 +219,120 @@ footer{
         border: none;
     }
 
-    .content-foo p{
-        color: #ccc;
-        border-bottom: 1px solid #f2f2f2;
-        padding-bottom: 20px;
-    }
+    .content-foo p{ 
+        width: auto;
+        height: 20%;
+            }
 
     .titulo-final{
         font-size: 20px;
     }
 }
+ footer */
+
+/*animation*/
+
+.my-element {
+  display: inline-block;
+  margin: 0 0.5rem;
+
+  animation: bounce; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
+  animation: infinite;
+}
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
+
+* {
+  font-family: Open Sans;
+}
+
+
+
+  /* Menu de hoizontal a vertical*/
+.topnav {
+overflow:hidden;
+background-color: #333;
+
+}
+
+.topnav a {
+float: left;
+display: block;
+color: #d8d0de;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+
+}
+
+@media screen and (max-width: 600px){
+    .topnav a {
+
+        float: none;
+        width: 100%;
+    }
+}
+    
+/* Cambio de color segun el tamaño*/
+.miestilo {
+text-align: center;
+
+}
+@media (max-width: 992px) {
+    .miestilo {
+        text-align: left;
+    }
+}
+
+
+
+  
+  /* Menu de horizontal a vertical*/
+
+
+  /* Sass
+  ul {
+    list-style: none;
+     li { 
+     padding : 15px;
+    display: inline-block;
+     a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #444;
+    }
+    }
+    }
+
+    /* Sass */
+/*uso & 
+    
+li { 
+    color:blue;
+    &:hover{
+    color:red;
+    }
+    }
+    
+    
+/*uso & */
+  
+
+
+/* import 
+@import "fonts";
+
+body {
+   font-size: $f-normal;
+   font-family: $tipo-general;
+}
+
+h1 {
+   font-size: $f-grande;
+   font-family: $tipo-alternativa;
+}
+
+/* import */
